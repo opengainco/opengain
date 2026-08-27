@@ -89,6 +89,8 @@ A standard comparison uses a maximum credit cap of 30. When Search Console evide
 
 See [SECURITY.md](SECURITY.md) for reporting vulnerabilities and [CONTRIBUTING.md](CONTRIBUTING.md) for development checks.
 
+The repository also includes a deliberately flawed, secret-free [SEO fixture](tests/fixtures/seo-site/README.md) and [acceptance cases](tests/evals.json) for repeatable host testing.
+
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).

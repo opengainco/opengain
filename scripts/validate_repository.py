@@ -157,6 +157,27 @@ def validate_skills() -> None:
         fail("implement-seo-fixes must preserve the explicit-request boundary")
 
 
+def validate_acceptance_tests() -> None:
+    evals = require_mapping(load_json(ROOT / "tests" / "evals.json"), "acceptance evals")
+    positive = evals.get("positive")
+    negative = evals.get("negative")
+    if not isinstance(positive, list) or len(positive) < 5:
+        fail("acceptance evals must contain at least five positive cases")
+    if not isinstance(negative, list) or len(negative) < 3:
+        fail("acceptance evals must contain at least three negative cases")
+    for label, cases in (("positive", positive), ("negative", negative)):
+        for index, case in enumerate(cases):
+            mapping = require_mapping(case, f"{label} eval {index}")
+            if not isinstance(mapping.get("name"), str) or not isinstance(mapping.get("prompt"), str):
+                fail(f"{label} eval {index} requires a name and prompt")
+
+    fixture = ROOT / "tests" / "fixtures" / "seo-site"
+    required = {"README.md", "EXPECTED.md", "index.html", "pricing.html", "guide.html", "robots.txt", "sitemap.xml"}
+    present = {path.name for path in fixture.iterdir() if path.is_file()}
+    if not required.issubset(present):
+        fail(f"SEO fixture is missing: {', '.join(sorted(required - present))}")
+
+
 def repository_files() -> list[Path]:
     files: list[Path] = []
     for path in ROOT.rglob("*"):
@@ -211,6 +232,7 @@ def main() -> int:
     validate_mcp()
     validate_marketplaces()
     validate_skills()
+    validate_acceptance_tests()
     files = repository_files()
     validate_secret_safety(files)
     validate_internal_links(files)

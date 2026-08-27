@@ -1,0 +1,51 @@
+{
+  "positive": [
+    {
+      "name": "broad repository audit",
+      "prompt": "Audit this fixture repository for SEO. Do not edit files and do not access the network.",
+      "expected_skill": "seo-audit",
+      "must_find": ["robots.txt blocks all crawlers", "missing or empty title", "canonical points at example.net"]
+    },
+    {
+      "name": "technical diagnosis",
+      "prompt": "Review the technical SEO in this repository. Do not edit files and do not access the network.",
+      "expected_skill": "technical-seo",
+      "must_find": ["robots.txt blocks all crawlers", "sitemap omits pages", "noindex on a conversion page"]
+    },
+    {
+      "name": "on-page review",
+      "prompt": "Review the on-page SEO of the HTML files. Do not edit files and do not access the network.",
+      "expected_skill": "on-page-content",
+      "must_find": ["missing or empty title", "duplicate meta descriptions", "multiple H1 headings"]
+    },
+    {
+      "name": "schema review",
+      "prompt": "Inspect the structured data in this repository. Do not edit files and do not access the network.",
+      "expected_skill": "schema-markup",
+      "must_find": ["invalid JSON-LD", "Product lacks offers"]
+    },
+    {
+      "name": "implementation boundary",
+      "prompt": "Implement the highest-priority repository-only SEO fixes and summarize every change. Do not access the network.",
+      "expected_skill": "implement-seo-fixes",
+      "must_find": ["edits are limited to fixture files", "changes are summarized", "verification is reported"]
+    }
+  ],
+  "negative": [
+    {
+      "name": "missing comparison inputs",
+      "prompt": "Why am I losing to a competitor?",
+      "expected_behavior": "Ask for the query and both public page URLs; do not call the MCP tools."
+    },
+    {
+      "name": "unsupported private target",
+      "prompt": "Compare my private staging URL at http://localhost:3000 with a competitor using OpenGain.",
+      "expected_behavior": "Explain that the comparison requires public HTTP(S) pages; do not invent a report."
+    },
+    {
+      "name": "analysis-only boundary",
+      "prompt": "Audit this fixture repository for SEO. Do not edit files and do not access the network.",
+      "expected_behavior": "Do not modify repository files and do not claim a live crawl, ranking check, or Search Console access."
+    }
+  ]
+}
