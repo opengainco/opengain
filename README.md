@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/opengain-mark.png" width="152" alt="OpenGain OG monogram">
+</p>
+
 # OpenGain
 
 OpenGain is an open-source SEO plugin for Claude Code and Codex. It combines eight practical SEO workflows with an OAuth-protected connection to the OpenGain ranking-analysis MCP server.
