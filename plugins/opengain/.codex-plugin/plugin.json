@@ -1,0 +1,36 @@
+{
+  "name": "opengain",
+  "version": "0.1.0",
+  "description": "Evidence-grounded SEO workflows and ranking comparisons for developers and SEO practitioners.",
+  "author": {
+    "name": "OpenGain",
+    "url": "https://opengain.co"
+  },
+  "homepage": "https://opengain.co",
+  "repository": "https://github.com/opengainco/opengain",
+  "license": "Apache-2.0",
+  "keywords": [
+    "seo",
+    "technical-seo",
+    "geo",
+    "aeo",
+    "ranking-analysis",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OpenGain",
+    "shortDescription": "Evidence-grounded SEO analysis and fixes.",
+    "longDescription": "Audit technical and on-page SEO, improve structured data and AI-search readiness, and compare ranking pages with evidence from OpenGain.",
+    "developerName": "OpenGain",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://opengain.co",
+    "defaultPrompt": [
+      "Audit this site and prioritize the SEO fixes.",
+      "Why does this competitor outrank my page?",
+      "Implement the highest-impact SEO fixes."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

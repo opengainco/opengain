@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "opengain",
+  "description": "Evidence-grounded SEO workflows and ranking comparisons powered by OpenGain.",
+  "owner": {
+    "name": "OpenGain",
+    "url": "https://opengain.co"
+  },
+  "plugins": [
+    {
+      "name": "opengain",
+      "source": "./plugins/opengain",
+      "description": "Audit and improve search visibility with portable SEO skills and evidence-grounded ranking comparisons.",
+      "version": "0.1.0",
+      "author": {
+        "name": "OpenGain"
+      },
+      "homepage": "https://opengain.co",
+      "repository": "https://github.com/opengainco/opengain",
+      "license": "Apache-2.0",
+      "keywords": ["seo", "technical-seo", "geo", "aeo", "ranking-analysis", "mcp"],
+      "category": "marketing"
+    }
+  ]
+}

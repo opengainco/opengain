@@ -1,0 +1,20 @@
+{
+  "name": "opengain",
+  "interface": {
+    "displayName": "OpenGain"
+  },
+  "plugins": [
+    {
+      "name": "opengain",
+      "source": {
+        "source": "local",
+        "path": "./plugins/opengain"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

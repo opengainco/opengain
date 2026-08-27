@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "opengain": {
+      "type": "http",
+      "url": "https://opengain.co/mcp"
+    }
+  }
+}
