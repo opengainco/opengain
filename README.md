@@ -24,8 +24,8 @@ claude --plugin-dir ./plugins/opengain
 ### Codex
 
 ```bash
-codex plugin marketplace add opengainco/opengain --json
-codex plugin add opengain@opengain --json
+codex plugin marketplace add opengainco/opengain
+codex plugin add opengain@opengain
 codex mcp login opengain --scopes opengain:analysis
 ```
 

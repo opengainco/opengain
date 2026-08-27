@@ -177,6 +177,18 @@ def validate_acceptance_tests() -> None:
     if not required.issubset(present):
         fail(f"SEO fixture is missing: {', '.join(sorted(required - present))}")
 
+    client_metadata = require_mapping(
+        load_json(ROOT / "tests" / "oauth" / "client-metadata.json"),
+        "release-test OAuth client metadata",
+    )
+    expected_client_id = "https://raw.githubusercontent.com/opengainco/opengain/main/tests/oauth/client-metadata.json"
+    if client_metadata.get("client_id") != expected_client_id:
+        fail("release-test OAuth client_id must be its exact public metadata URL")
+    if client_metadata.get("redirect_uris") != ["http://127.0.0.1:1455/callback"]:
+        fail("release-test OAuth client must use only the approved loopback callback")
+    if client_metadata.get("token_endpoint_auth_method") != "none":
+        fail("release-test OAuth client must be a public client without a secret")
+
 
 def repository_files() -> list[Path]:
     files: list[Path] = []

@@ -1,0 +1,16 @@
+{
+  "client_id": "https://raw.githubusercontent.com/opengainco/opengain/main/tests/oauth/client-metadata.json",
+  "client_name": "OpenGain release acceptance test",
+  "client_uri": "https://github.com/opengainco/opengain",
+  "redirect_uris": [
+    "http://127.0.0.1:1455/callback"
+  ],
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "token_endpoint_auth_method": "none"
+}
