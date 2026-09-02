@@ -50,7 +50,7 @@ Start a new conversation after installing or updating so the host loads the curr
 | `technical-seo` | Diagnose crawlability, indexability, performance, and technical signals. |
 | `on-page-content` | Improve intent alignment, metadata, content, and internal linking. |
 | `schema-markup` | Inspect, validate, generate, and implement JSON-LD. |
-| `geo-aeo` | Improve AI crawler access, citability, and answer readiness. |
+| `geo-aeo` | Improve AI crawler access, citability, and answer readiness, and measure whether AI assistants mention or cite a brand. |
 | `local-international` | Review local-search or international/hreflang concerns. |
 | `competitor-ranking` | Compare ranking pages with OpenGain's evidence-grounded MCP tools. |
 | `implement-seo-fixes` | Plan and apply requested SEO changes as reviewable code edits. |
